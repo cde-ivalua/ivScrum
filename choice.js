@@ -18,14 +18,15 @@ const DccReminder = () => {
 const teams = [
     {
        "name": "Integration",
-       "id": "3",
-       "trelloId": "6180fec4c1f0071005db2e8c",
+       "id": "1",
+       //"trelloId": "6180fec4c1f0071005db2e8c",
+       "trelloId": "NU3JyLTu",
        "devs": [
            { "trigram": "afo", "name": "Antonin", "trello": "617a5c4c59490938673593f0" },      
-           { "trigram": "cda", "name": "Christophe (CDA)", "trello": "5721daa1b7364971e546197a" },    
-           { "trigram": "cde", "name": "Christophe (CDE)", "trello": "5e69fb8126f1b17a8b9e282b" }, 
+           { "trigram": "cda", "name": "Christophe", "trello": "5721daa1b7364971e546197a" }, 
            { "trigram": "hro", "name": "Hugo", "trello": "" },                               
-           { "trigram": "ksi", "name": "Karine", "trello": "633d8f1ea46007042dc1269c" },   
+           { "trigram": "ksi", "name": "Kaka", "trello": "633d8f1ea46007042dc1269c" },      
+           { "trigram": "cde", "name": "Kiki", "trello": "5e69fb8126f1b17a8b9e282b" }, 
            { "trigram": "mil", "name": "Michael", "trello": "61828a4b9c03d460e173385e" },
            { "trigram": "nmi", "name": "Nicolas", "trello": "52933ef71af028a5410087b3" },            
            { "trigram": "pst", "name": "Philippe", "trello": "57357594b69d9fd7e3cf8037" },            
