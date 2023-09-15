@@ -16,40 +16,24 @@ const DccReminder = () => {
     // txt.textContent = `${diffDays} Days Before DCC Release...`;    
 }
 const teams = [
-     {
-        "name": "Integration",
-        "id": "3",
-        "trelloId": "6180fec4c1f0071005db2e8c",
-        "devs": [
-            { "trigram": "afo", "name": "Antonin", "trello": "617a5c4c59490938673593f0" },
-            { "trigram": "cda", "name": "Christophe", "trello": "5721daa1b7364971e546197a" },
-            { "trigram": "mil", "name": "Michael", "trello": "61828a4b9c03d460e173385e" },
-            { "trigram": "nmi", "name": "Nicolas", "trello": "52933ef71af028a5410087b3" },            
-            { "trigram": "pst", "name": "Philippe", "trello": "57357594b69d9fd7e3cf8037" },            
-            { "trigram": "skf", "name": "Salim", "trello": "62dfa8865f56db0ad39af728" },                                   
-            { "trigram": "ksi", "name": "Karine", "trello": "633d8f1ea46007042dc1269c" },            
-            { "trigram": "vml", "name": "Vincent", "trello": "6182a222015f9d30b7ae7620" },            
-            { "trigram": "cde", "name": "Christophe", "trello": "6182a222015f9d30b7ae7620" }
-
-        ]
-    },
     {
-        "name": "Admin",
-        "id": "2",
-        "trelloId": "626f8c46f7f94f30b0bc78d4",
-        "devs": [
-            { "trigram": "tdu", "name": "Tu", "trello": "5ab8f1d5fb04fd4f986bba07" },
-            { "trigram": "msb", "name": "Mouslim", "trello": "6135e6424cd2f5761c2fff14" },
-            { "trigram": "dmz", "name": "David", "trello": "633ae6157b366c03dbca063d" },
-            { "trigram": "nal", "name": "Nicolas", "trello": "6386161990be280583161182" },
-            { "trigram": "ngt", "name": "Nicolas", "trello": "6321c1815ad59f011622302f" },
-            { "trigram": "ohx", "name": "Oren", "trello": "6131f0762994ad1f6be6ff54" },
-            { "trigram": "odc", "name": "Olivier", "trello": "613239e4c739e46d0ed29080" },
-            { "trigram": "thm", "name": "Thibaut", "trello": "6131f0769094ea72b987f32b" },
-            { "trigram": "tsn", "name": "Tania", "trello": "62c6e09038830279d6e0e389" },
-            { "trigram": "aud", "name": "Aurélie", "trello": "5a69977d817b52ae3f4ab7b1" }
-        ]
-    }
+       "name": "Integration",
+       "id": "3",
+       "trelloId": "6180fec4c1f0071005db2e8c",
+       "devs": [
+           { "trigram": "afo", "name": "Antonin", "trello": "617a5c4c59490938673593f0" },      
+           { "trigram": "cda", "name": "Christophe (CDA)", "trello": "5721daa1b7364971e546197a" },    
+           { "trigram": "cde", "name": "Christophe (CDE)", "trello": "5dd3f667cfe7b67ee3695081" }, 
+           { "trigram": "hro", "name": "Hugo", "trello": "" },                               
+           { "trigram": "ksi", "name": "Karine", "trello": "633d8f1ea46007042dc1269c" },   
+           { "trigram": "mil", "name": "Michael", "trello": "61828a4b9c03d460e173385e" },
+           { "trigram": "nmi", "name": "Nicolas", "trello": "52933ef71af028a5410087b3" },            
+           { "trigram": "pst", "name": "Philippe", "trello": "57357594b69d9fd7e3cf8037" },            
+           { "trigram": "skf", "name": "Salim", "trello": "62dfa8865f56db0ad39af728" },            
+           { "trigram": "vml", "name": "Vincent", "trello": "6182a222015f9d30b7ae7620" },  
+
+       ]
+   }
 ]
 const getTeam = () => {
     const tab = document.querySelector('.selected.tab');
