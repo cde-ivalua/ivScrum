@@ -1,8 +1,7 @@
 const apiUrl = 'https://iv-scrum-api.herokuapp.com';
 const trelloApiUrl = 'https://api.trello.com/1'
 const trelloApiQuerystring = 'key=dd24b369a1b776a4c82bb7250d62c889&token=ATTA88b4f3cc0d8b223e23f83cb6a60758b2a128d1ed97fda341a6bd62a00c74ddd1DCEEAF6E';
-//const trelloApiQuerystring = 'key=10e69760de5166baedbbf5349ee6a617&token=0e76f01f0aa92582ad6a4a1821f44a28781fdd4f1a373390b32c4daae6fd2d8e';
-//const apiUrl = 'https://localhost:5001'
+
 fetch(`${apiUrl}/team`, 
 {
     method: 'GET',
@@ -14,6 +13,7 @@ fetch(`${apiUrl}/team`,
 .then(teams => {    
     init(teams);
 });
+
 const plusButtonClickHandler = (e) => {
     const target = e.target,
     btn = target.closest('button'),
@@ -28,6 +28,7 @@ const plusButtonClickHandler = (e) => {
     });
     table.append(newRow);
 }
+
 const fieldChangeHandler = (e) => {
     const headers = new Headers();        
     headers.append('mode', 'cors');
@@ -62,6 +63,7 @@ const fieldChangeHandler = (e) => {
         row.setAttribute('data-dev-id', data.id);
     });
 }
+
 const getTrelloMembers = async (teamId) => {
     const myHeaders = new Headers();
     myHeaders.set('Accept', 'application/json');    
@@ -69,6 +71,7 @@ const getTrelloMembers = async (teamId) => {
         {method: 'GET', headers: myHeaders})
         .then(res => res.json())        
 }
+
 const buildSelect = (members) => {
     const select = document.createElement('select');
     members.forEach(member => {
@@ -79,6 +82,7 @@ const buildSelect = (members) => {
     });
     return select;
 }
+
 const init = async (teams) => {
     const hiddenColumns = ['id', 'team', 'teamId'];
     teams.forEach(async team => {
@@ -185,6 +189,7 @@ const init = async (teams) => {
         })
     })
 }
+
 const getTrelloBoards = async () => {
     const myHeaders = new Headers();
     myHeaders.set('Accept', 'application/json');    
@@ -192,6 +197,7 @@ const getTrelloBoards = async () => {
         {method: 'GET', headers: myHeaders})
         .then(res => res.json())        
 }
+
 const buildBoardSelect = (boards, teams) => {
     const select = document.createElement('select');
     boards.forEach(board => {

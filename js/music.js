@@ -32,7 +32,7 @@ const nextSong = () => {
     index++;
     if (index === tracks.length)
         index = 0;
-    player.src = src;    
+    player.src = './musics/' + src;    
     player.pause();
     player.load();
     player.play();

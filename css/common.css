@@ -66,7 +66,7 @@ body,
     width: 100%;
 }
 body{
-    background-image: url('./wallpapers/wallpaper1.jpg');
+    background-image: url('../images/wallpaper1.jpg');
     -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
