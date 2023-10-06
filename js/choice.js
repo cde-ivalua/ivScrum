@@ -24,7 +24,7 @@ const teams = [
        "devs": [
            { "trigram": "afo", "name": "Antonin", "trello": "617a5c4c59490938673593f0" },      
            { "trigram": "cda", "name": "Christophe", "trello": "5721daa1b7364971e546197a" }, 
-           { "trigram": "hro", "name": "Hugo", "trello": "" },                               
+           { "trigram": "hro", "name": "Hugo", "trello": "650d7b1b25eb0ee8cc497c1c" },                               
            { "trigram": "ksi", "name": "Kaka", "trello": "633d8f1ea46007042dc1269c" },      
            { "trigram": "cde", "name": "Kiki", "trello": "5e69fb8126f1b17a8b9e282b" }, 
            { "trigram": "mil", "name": "Michael", "trello": "61828a4b9c03d460e173385e" },
