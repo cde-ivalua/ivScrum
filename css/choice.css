@@ -319,3 +319,19 @@ input{
     font-family: monospace;
     font-size: 1.4em;
 }
+li.off{
+    opacity: .5;
+    text-decoration: line-through;
+}
+
+div.particle {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius: 500rem;
+}
+
+li.winner {
+    color: gold;
+    background: #fdbf0047;
+}
