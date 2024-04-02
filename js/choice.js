@@ -433,7 +433,7 @@ const pickDev = () => {
             const txtDevCurrent = document.getElementById('txtDevCurrent');
             txtDevCurrent.textContent = null;
             const img = document.createElement('img');
-            img.src = './assets/icons/fuck.png';
+            img.src = './images/fuck.png';
             img.style.width = '150px';
             txtDevCurrent.after(img);
             btn.disabled = true;
@@ -620,7 +620,7 @@ const initCauchyStatus = () => {
         if (s === true){
             icon = 'opened'
         }
-        img.setAttribute('src', `assets/icons/delorean-${icon}.png`);
+        img.setAttribute('src', `images/delorean-${icon}.png`);
         img.classList.remove('hidden')
     })
 }
