@@ -26,12 +26,11 @@ const teams = [
             'asb': {'trigram' : 'asb', 'name': 'Amin', 'present' : getBoolFromStorage('asb'), 'tab' : null, 'done' : false, 'time' : 0 },
             'afo': {'trigram' : 'afo', 'name': 'Antonin', 'trello': '617a5c4c59490938673593f0', 'present' : getBoolFromStorage('afo'), 'tab' : null, 'done' : false, 'time' : 0 },
             'cda': {'trigram' : 'cda', 'name': 'Christophe', 'trello': '5721daa1b7364971e546197a', 'present' : getBoolFromStorage('cda'), 'tab' : null, 'done' : false, 'time' : 0 },
-            'hro': {'trigram' : 'hro', 'name': 'Hugo', 'trello': '650d7b1b25eb0ee8cc497c1c', 'present' : getBoolFromStorage('hro'), 'tab' : null, 'done' : false, 'time' : 0 },
             'ksi': {'trigram' : 'ksi', 'name': 'Kaka', 'trello': '633d8f1ea46007042dc1269c', 'present' : getBoolFromStorage('ksi'), 'tab' : null, 'done' : false, 'time' : 0 },
             'cde': {'trigram' : 'cde', 'name': 'Kiki', 'trello': '5e69fb8126f1b17a8b9e282b', 'present' : getBoolFromStorage('cde'), 'tab' : null, 'done' : false, 'time' : 0 },
             'mil': {'trigram' : 'mil', 'name': 'Michael', 'trello': '61828a4b9c03d460e173385e', 'present' : getBoolFromStorage('mil'), 'tab' : null, 'done' : false, 'time' : 0 },
-            'nmi': {'trigram' : 'nmi', 'name': 'Nicolas', 'trello': '52933ef71af028a5410087b3', 'present' : getBoolFromStorage('nmi'), 'tab' : null, 'done' : false, 'time' : 0 },
             'pst': {'trigram' : 'pst', 'name': 'Philippe', 'trello': '57357594b69d9fd7e3cf8037', 'present' : getBoolFromStorage('pst'), 'tab' : null, 'done' : false, 'time' : 0 },
+            'raa': { 'trigram': 'raa', 'name': 'Rabah', 'present': getBoolFromStorage('raa'), 'tab': null, 'done': false, 'time': 0 },
             'skf': {'trigram' : 'skf', 'name': 'Salim', 'trello': '62dfa8865f56db0ad39af728', 'present' : getBoolFromStorage('skf'), 'tab' : null, 'done' : false, 'time' : 0 },
             'vml': {'trigram' : 'vml', 'name': 'Vincent', 'trello': '6182a222015f9d30b7ae7620', 'present' : getBoolFromStorage('vml'), 'tab' : null, 'done' : false, 'time' : 0 }
         }
