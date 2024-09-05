@@ -32,6 +32,7 @@ const teams = [
             'mil': {'trigram' : 'mil', 'name': 'Michael', 'trello': '61828a4b9c03d460e173385e', 'present' : getBoolFromStorage('mil'), 'tab' : null, 'done' : false, 'time' : 0 },
             'pst': {'trigram' : 'pst', 'name': 'Philippe', 'trello': '57357594b69d9fd7e3cf8037', 'present' : getBoolFromStorage('pst'), 'tab' : null, 'done' : false, 'time' : 0 },
             'skf': {'trigram' : 'skf', 'name': 'Salim', 'trello': '62dfa8865f56db0ad39af728', 'present' : getBoolFromStorage('skf'), 'tab' : null, 'done' : false, 'time' : 0 },
+            'sih': {'trigram' : 'sih', 'name': 'Sami', 'present' : getBoolFromStorage('sih'), 'tab' : null, 'done' : false, 'time' : 0 },
             'vml': {'trigram' : 'vml', 'name': 'Vincent', 'trello': '6182a222015f9d30b7ae7620', 'present' : getBoolFromStorage('vml'), 'tab' : null, 'done' : false, 'time' : 0 }
         }
     }
