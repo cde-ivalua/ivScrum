@@ -3,16 +3,16 @@
 const DccReminder = () => {
     const CCtab = document.querySelector('.tab.selected[data-team-id="2b139375-8dda-40ae-94d9-c4d58713ac91"]');
     const txt = document.getElementById('txtDevCurrent');
-    if (!CCtab){
+    if (!CCtab) {
         txt.textContent = null;
         return;
     }
     // var a = new Date('24 december 2022')
-    var a = new Date('28 november 2022'); 
-    var b = new Date()    
+    var a = new Date('28 november 2022');
+    var b = new Date()
     const diffTime = Math.abs(a - b);
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
-    txt.textContent = `Anaïs, ${diffDays} Days Before End of Free Hosting Plan...`;    
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    txt.textContent = `Anaïs, ${diffDays} Days Before End of Free Hosting Plan...`;
     // txt.textContent = `${diffDays} Days Before DCC Release...`;    
 }
 
@@ -21,7 +21,7 @@ const teams = [
         "name": "Integration",
         "id": "1",
         "trelloId": "NU3JyLTu",
-        "devs": 
+        "devs":
         {
             'afo': {'trigram' : 'afo', 'name': 'Antonin', 'trello': '617a5c4c59490938673593f0', 'present' : getBoolFromStorage('afo'), 'tab' : null, 'done' : false, 'time' : 0 },
             'cda': {'trigram' : 'cda', 'name': 'Christophe', 'trello': '5721daa1b7364971e546197a', 'present' : getBoolFromStorage('cda'), 'tab' : null, 'done' : false, 'time' : 0 },
@@ -36,13 +36,12 @@ const teams = [
             'skf': {'trigram' : 'skf', 'name': 'Salim', 'trello': '62dfa8865f56db0ad39af728', 'present' : getBoolFromStorage('skf'), 'tab' : null, 'done' : false, 'time' : 0 },
             'vml': {'trigram' : 'vml', 'name': 'Vincent', 'trello': '6182a222015f9d30b7ae7620', 'present' : getBoolFromStorage('vml'), 'tab' : null, 'done' : false, 'time' : 0 }
         }
-        
     }
 ]
 
 function getBoolFromStorage(key) {
     var it = localStorage.getItem(key);
-    if (it === null){
+    if (it === null) {
         return true;
     }
     return localStorage.getItem(key) === 'true';
@@ -56,22 +55,22 @@ var currentTeam = null;
 var selectedDev = null;
 const getTeam = () => {
     const tab = document.querySelector('.selected.tab');
-    if (!tab){
+    if (!tab) {
         return teams[0].name;
     }
     const id = tab.getAttribute('data-trello-id');
     const team = teams.find(e => e.id === id);
     return team.name;
 }
-function loadJSON(callback) {   
+function loadJSON(callback) {
     var data = teams;
     callback(data);
- }
- /**
- * Get the dev list as an array from
- * the input set in the corresponding textarea.
- * @returns the dev list.
- */
+}
+/**
+* Get the dev list as an array from
+* the input set in the corresponding textarea.
+* @returns the dev list.
+*/
 const getDevList = () => {
     const items = document.querySelectorAll('.dev.column li');
     const res = [...items].reduce((prev, cur, i, arr) => {
@@ -84,15 +83,15 @@ const getDevList = () => {
     }, []);
     return res;
 }
- function initDevList() {
+function initDevList() {
     const ul = document.querySelector('.dev.column');
-    ul.innerHTML = '';    
-    loadJSON((data) => { 
+    ul.innerHTML = '';
+    loadJSON((data) => {
         const devs = data.find(e => e.name === getTeam()).devs;
         currentTeam = devs;
-        Object.entries(devs).forEach(([trigram, e]) => { 
+        Object.entries(devs).forEach(([trigram, e]) => {
             const li = document.createElement('li');
-            li.setAttribute('data-user-id', e.trello);            
+            li.setAttribute('data-user-id', e.trello);
             const div = document.createElement('div');
             div.classList.add('label');
             div.setAttribute('id', trigram);
@@ -104,26 +103,26 @@ const getDevList = () => {
             chk.setAttribute('value', trigram);
             chk.setAttribute('id', trigram);
             chk.setAttribute('type', 'checkbox');
-            chk.checked = getBoolFromStorage(trigram);   
+            chk.checked = getBoolFromStorage(trigram);
             chk.addEventListener('change', chkChangeHandler)
-            
+
             li.append(div);
             div.append(label);
             li.append(chk);
             ul.append(li);
-            if (!chk.checked){
+            if (!chk.checked) {
                 li.classList.add('off');
             }
             currentTeam[trigram].tab = li;
         });
-    });    
-   }
+    });
+}
 const chkChangeHandler = (e) => {
     const target = e.target,
-    id = target.getAttribute('value');
+        id = target.getAttribute('value');
     currentTeam[id].present = target.checked;
     var tab = currentTeam[id].tab;
-    if (target.checked){
+    if (target.checked) {
         tab.classList.remove('off');
         setBoolToStorage(id, 'true');
     }
@@ -134,7 +133,7 @@ const chkChangeHandler = (e) => {
 }
 //#region Constants
 const SQRT_PI = Math.sqrt(Math.PI);
-const COLORS = ['#6867AC', '#A267AC', '#CE7BB0', '#FFBCD1', '#705089', '#A267AC', '#CE7BB0', '#ef628c', '#a83f5d','#af1642'];
+const COLORS = ['#6867AC', '#A267AC', '#CE7BB0', '#FFBCD1', '#705089', '#A267AC', '#CE7BB0', '#ef628c', '#a83f5d', '#af1642'];
 //#endregion
 
 //#region Global variables
@@ -356,25 +355,25 @@ const setDevAsCurrent = dev => {
 
 var countdown;
 stopTimer = false;
-const startCountDown =() => {
+const startCountDown = () => {
     var countDownDate = addMinutes(new Date(), 15).getTime();
     // Update the count down every 1 second
-    var countdown = setInterval(function() {
+    var countdown = setInterval(function () {
         // Get today's date and time
-        var now = new Date().getTime();    
+        var now = new Date().getTime();
         // Find the distance between now and the count down date
-        var distance = countDownDate - now;    
+        var distance = countDownDate - now;
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        setTime(minutes, seconds); 
+        setTime(minutes, seconds);
         stopTimer = stopTimer | (minutes === 0 && seconds === 0);
         if (stopTimer) {
-            clearInterval(countdown);            
+            clearInterval(countdown);
         }
     }, 1000);
 }
 const addMinutes = (date, minutes) => {
-    return new Date(date.getTime() + minutes*60000);
+    return new Date(date.getTime() + minutes * 60000);
 }
 const devSpeakingTime = {};
 const startDevTimer = (dev) => {
@@ -386,10 +385,10 @@ const stopDevTimer = (dev) => {
     }
     var endDate = new Date();
     var distance = endDate.getTime() - devSpeakingTime[dev.trigram].getTime();
-    var container = document.querySelector(`.label[id="${dev.trigram}"]`);   
-    var timeDiv = document.createElement('span');  
+    var container = document.querySelector(`.label[id="${dev.trigram}"]`);
+    var timeDiv = document.createElement('span');
     currentTeam[dev.trigram].time = distance;
-    timeDiv.classList.add('time-speaking'); 
+    timeDiv.classList.add('time-speaking');
     timeDiv.appendChild(document.createTextNode(dateTostring(distance)));
     container.after(timeDiv)
 }
@@ -399,7 +398,7 @@ const dateTostring = (distance) => {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     // Display the result in the element with id="demo"
     let txt = '';
-    if (minutes > 0){
+    if (minutes > 0) {
         txt = `${minutes}m `;
     }
     txt += `${seconds}s`;
@@ -410,7 +409,7 @@ const dateTostring = (distance) => {
  */
 var isPicking = false;
 const pickDev = () => {
-    if (isPicking){
+    if (isPicking) {
         return;
     }
     isPicking = true;
@@ -418,19 +417,19 @@ const pickDev = () => {
     //generate list of dev to pick, who are presend and not done
     let devsToPick = Object.entries(currentTeam).filter(e => e[1].present && !e[1].done).map(v => v[1]);
     let allDevs = Object.entries(currentTeam).filter(e => e[1].present).map(v => v[1]);
-    
+
     //si aucun dev n'as commencé, starCountDown
-    if (devsToPick.length === allDevs.length){
+    if (devsToPick.length === allDevs.length) {
         startCountDown();
     }
- 
-    
+
+
     if (devsToPick.length === 0) {
-        
+
         rewardUser();
-    
+
         const btn = document.getElementById('btnPick');
-        if (btn.getAttribute('fini') === 'finito'){
+        if (btn.getAttribute('fini') === 'finito') {
             const txtDevCurrent = document.getElementById('txtDevCurrent');
             txtDevCurrent.textContent = null;
             const img = document.createElement('img');
@@ -444,22 +443,22 @@ const pickDev = () => {
             stopDevTimer(selectedDev);
         }
         btn.setAttribute('fini', 'finito')
-        
+
         isPicking = false;
-        stopTimer = true;        
+        stopTimer = true;
         return;
-    }     
+    }
     stopDevTimer(selectedDev);
-    
+
     if (devsToPick.length === 1) {
         isPicking = false;
         updateCurrentDev(devsToPick[0]);
         setDevAsCurrent(devsToPick[0]);
         return;
-    }    
+    }
     let isStopped = false;
     const t = allDevs.length * 3
-    const totalSteps = Math.floor(rand(t,t + allDevs.length));
+    const totalSteps = Math.floor(rand(t, t + allDevs.length));
     let currentStep = 0;
     const pointMap = generatePointMap(totalSteps, 3500)
     let devIndex = 0;
@@ -475,13 +474,13 @@ const pickDev = () => {
 
             const txtDevCurrent = document.getElementById('txtDevCurrent');
             txtDevCurrent.setAttribute('data-color', colors[colorIndex]);
-            colorIndex = (colorIndex + 1) % colors.length; 
-            
+            colorIndex = (colorIndex + 1) % colors.length;
+
             const prevTime = pointMap[currentStep];
             const nextTime = pointMap[currentStep + 1];
             const interval = prevTime - nextTime;
             currentStep++;
-            isStopped = currentStep === totalSteps-1;
+            isStopped = currentStep === totalSteps - 1;
 
             setTimeout(pickDevInterval, interval);
         }
@@ -499,7 +498,7 @@ function rewardUser() {
     let leastSpeakingDev = null;
     let leastSpeakingTime = Number.MAX_VALUE;
     Object.entries(currentTeam).forEach(([trigram, dev]) => {
-        if (dev.time < leastSpeakingTime && dev.present){
+        if (dev.time < leastSpeakingTime && dev.present) {
             leastSpeakingTime = dev.time;
             leastSpeakingDev = dev;
         }
@@ -542,15 +541,15 @@ function updateCurrentDev(dev) {
 }
 
 const toPascalCase = (sentence) => sentence
-   .split(' ')
-   .map(word => word[0]
-   .toUpperCase()
-   .concat(word.slice(1)))
-   .join('');
+    .split(' ')
+    .map(word => word[0]
+        .toUpperCase()
+        .concat(word.slice(1)))
+    .join('');
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
-  }
+}
 const getDevName = (dev) => {
     if (dev.toLowerCase() === 'mbo')
         return 'Chaton';
@@ -560,7 +559,7 @@ const getDevName = (dev) => {
 
 
 const resetPicker = () => {
-    stopTimer = true;        
+    stopTimer = true;
     devList = getDevList();
     remainingDevs = [...devList];
     pickedDevs = [];
@@ -570,9 +569,9 @@ const resetPicker = () => {
     document.title = `Scrum dev picker`;
     // redrawAll(remainingDevs);
     setTime('15', '0');
-    if (typeof lists !== 'undefined') {        
+    if (typeof lists !== 'undefined') {
         lists = [];
-    } 
+    }
     document.querySelectorAll('.dev.column li.selected').forEach(li => {
         li.classList.remove('selected')
     })
@@ -588,50 +587,50 @@ const captureKey = evt => {
  */
 const initEvents = () => {
     $('btnPick').addEventListener('click', pickDev);
-    $('btnReset').addEventListener('click', () => document.location.reload());    
+    $('btnReset').addEventListener('click', () => document.location.reload());
     $('btnAdd').addEventListener('click', addDev);
     document.addEventListener('keypress', captureKey);
 }
 
-function addDev() { 
-    let name=prompt("Who are we adding?");
-    if (name === null){
+function addDev() {
+    let name = prompt("Who are we adding?");
+    if (name === null) {
         return;
     }
     name = name.toLowerCase();
-    if (name.length === 0){
+    if (name.length === 0) {
         return;
     }
-    currentTeam[name] = {'trigram' : name, 'name': toPascalCase(name), 'present' : true, 'tab' : null, 'done' : false, 'time' : 0 };
+    currentTeam[name] = { 'trigram': name, 'name': toPascalCase(name), 'present': true, 'tab': null, 'done': false, 'time': 0 };
     initDevList();
 }
 
 const initCauchyStatus = () => {
-    fetch(`${apiUrl}/branch/status`, 
-    {
-    method: 'GET',
-    headers: {
-        'Accept': 'application/json'        
-    }
-    })
-    .then(r => r.json())
-    .then(s => {   
-        const img = document.getElementById('cauchyStatusImg');
-        let icon = 'locked'
-        if (s === true){
-            icon = 'opened'
-        }
-        img.setAttribute('src', `images/delorean-${icon}.png`);
-        img.classList.remove('hidden')
-    })
+    fetch(`${apiUrl}/branch/status`,
+        {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(r => r.json())
+        .then(s => {
+            const img = document.getElementById('cauchyStatusImg');
+            let icon = 'locked'
+            if (s === true) {
+                icon = 'opened'
+            }
+            img.setAttribute('src', `images/delorean-${icon}.png`);
+            img.classList.remove('hidden')
+        })
 }
 /**
  * Start point of the application.
  */
-const init = () => {     
+const init = () => {
     myminute = jQuery(".clock .flipper:nth-child(1) div:not(.new) .text");
-    mysecond = jQuery(".clock .flipper:nth-child(2) div:not(.new) .text");         
-    initDevList();        
+    mysecond = jQuery(".clock .flipper:nth-child(2) div:not(.new) .text");
+    initDevList();
     resetPicker();
     initEvents();
 }
