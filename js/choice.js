@@ -25,8 +25,8 @@ const teams = [
         {
             'afo': {'trigram' : 'afo', 'name': 'Antonin', 'trello': '617a5c4c59490938673593f0', 'present' : getBoolFromStorage('afo'), 'tab' : null, 'done' : false, 'time' : 0 },
             'cda': {'trigram' : 'cda', 'name': 'Christophe', 'trello': '5721daa1b7364971e546197a', 'present' : getBoolFromStorage('cda'), 'tab' : null, 'done' : false, 'time' : 0 },
-            'cdn': {'trigram' : 'cdn', 'name': 'Christopher', 'trello': '5e69fb8126f1b17a8b9e282b', 'present' : getBoolFromStorage('cdn'), 'tab' : null, 'done' : false, 'time' : 0 },
-            'cdr': {'trigram' : 'cdr', 'name': 'Cyril', 'trello': '5e69fb8126f1b17a8b9e282b', 'present' : getBoolFromStorage('cdr'), 'tab' : null, 'done' : false, 'time' : 0 },
+            'cdn': {'trigram' : 'cdn', 'name': 'Christopher', 'present' : getBoolFromStorage('cdn'), 'tab' : null, 'done' : false, 'time' : 0 },
+            'cdr': {'trigram' : 'cdr', 'name': 'Cyril', 'present' : getBoolFromStorage('cdr'), 'tab' : null, 'done' : false, 'time' : 0 },
             'hro': {'trigram' : 'hro', 'name': 'Hugo', 'trello': '650d7b1b25eb0ee8cc497c1c', 'present' : getBoolFromStorage('hro'), 'tab' : null, 'done' : false, 'time' : 0 },
             'ksi': {'trigram' : 'ksi', 'name': 'Kaka', 'trello': '633d8f1ea46007042dc1269c', 'present' : getBoolFromStorage('ksi'), 'tab' : null, 'done' : false, 'time' : 0 },
             'cde': {'trigram' : 'cde', 'name': 'Kiki', 'trello': '5e69fb8126f1b17a8b9e282b', 'present' : getBoolFromStorage('cde'), 'tab' : null, 'done' : false, 'time' : 0 },
