@@ -477,7 +477,7 @@ const pickDev = () => {
 
             const prevTime = pointMap[currentStep];
             const nextTime = pointMap[currentStep + 1];
-            const interval = prevTime - nextTime;
+            const interval = Math.max(prevTime - nextTime, 0);
             currentStep++;
             isStopped = currentStep === totalSteps - 1;
 
