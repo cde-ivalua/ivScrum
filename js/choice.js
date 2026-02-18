@@ -463,7 +463,8 @@ const pickDev = () => {
     const t = 0 //allDevs.length
     const totalSteps = Math.floor(rand(t, t + allDevs.length));
     let currentStep = 0;
-    const pointMap = generatePointMap(totalSteps, 3500)
+    //const pointMap = generatePointMap(totalSteps, 3500)
+    const pointMap = generatePointMap(totalSteps, 100)
     let devIndex = 0;
     let colorIndex = 0;
     const pickDevInterval = () => {
