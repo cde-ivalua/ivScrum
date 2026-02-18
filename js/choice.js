@@ -460,7 +460,7 @@ const pickDev = () => {
     }
     let isStopped = false;
     //const t = allDevs.length * 3
-    const t = allDevs.length
+    const t = 0 //allDevs.length
     const totalSteps = Math.floor(rand(t, t + allDevs.length));
     let currentStep = 0;
     const pointMap = generatePointMap(totalSteps, 3500)
