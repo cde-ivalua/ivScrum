@@ -459,8 +459,8 @@ const pickDev = () => {
         return;
     }
     let isStopped = false;
-    //const t = allDevs.length * 3
-    const t = 1 //allDevs.length
+    const t = allDevs.length * 3
+    //const t = 1 //allDevs.length
     const totalSteps = Math.floor(rand(t, t + allDevs.length));
     let currentStep = 0;
     //const pointMap = generatePointMap(totalSteps, 3500)
@@ -484,7 +484,7 @@ const pickDev = () => {
             const nextTime = pointMap[currentStep + 1];
             const interval = Math.max((prevTime - nextTime), 0);
             currentStep++;
-            isStopped = currentStep === totalSteps - 1;
+            isStopped = (currentStep > totalSteps) ? (currentStep === totalSteps - 1) : true;
 
             setTimeout(pickDevInterval, interval);
         }
