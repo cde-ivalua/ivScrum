@@ -435,7 +435,7 @@ const pickDev = () => {
             const txtDevCurrent = document.getElementById('txtDevCurrent');
             txtDevCurrent.textContent = null;
             const img = document.createElement('img');
-            img.src = './images/fuck.png';
+            img.src = './images/guy_roux.PNG';
             img.style.width = '150px';
             txtDevCurrent.after(img);
             btn.disabled = true;
@@ -459,10 +459,10 @@ const pickDev = () => {
         return;
     }
     let isStopped = false;
-    const t = allDevs.length * 3
-    const totalSteps = Math.floor(rand(t, t + allDevs.length));
+    //const t = allDevs.length * 3
+    const totalSteps = Math.floor(rand(1, 1 + allDevs.length));
     let currentStep = 0;
-    const pointMap = generatePointMap(totalSteps, 3500)
+    const pointMap = generatePointMap(totalSteps, 100)
     let devIndex = 0;
     let colorIndex = 0;
     const pickDevInterval = () => {
@@ -482,7 +482,7 @@ const pickDev = () => {
             const nextTime = pointMap[currentStep + 1];
             const interval = prevTime - nextTime;
             currentStep++;
-            isStopped = currentStep === totalSteps - 1;
+            isStopped = (currentStep < totalSteps) ? (currentStep === totalSteps - 1) : true;
 
             setTimeout(pickDevInterval, interval);
         }
