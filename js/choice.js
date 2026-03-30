@@ -23,6 +23,7 @@ const teams = [
         "trelloId": "NU3JyLTu",
         "devs":
         {
+            'azr': {'trigram' : 'azr', 'name': 'Akli', 'trello': getBoolFromStorage('azr'), 'present' : getBoolFromStorage('azr'), 'tab' : null, 'done' : false, 'time' : 0 },
             'cda': {'trigram' : 'cda', 'name': 'Christophe', 'trello': '5721daa1b7364971e546197a', 'present' : getBoolFromStorage('cda'), 'tab' : null, 'done' : false, 'time' : 0 },
             'cdn': {'trigram' : 'cdn', 'name': 'Christopher', 'present' : getBoolFromStorage('cdn'), 'tab' : null, 'done' : false, 'time' : 0 },
             'cdr': {'trigram' : 'cdr', 'name': 'Cyril', 'present' : getBoolFromStorage('cdr'), 'tab' : null, 'done' : false, 'time' : 0 },
