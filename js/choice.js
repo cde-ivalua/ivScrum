@@ -29,6 +29,7 @@ const teams = [
             'ksi': {'trigram' : 'ksi', 'name': 'Kaka', 'trello': '633d8f1ea46007042dc1269c', 'present' : getBoolFromStorage('ksi'), 'tab' : null, 'done' : false, 'time' : 0 },
             'cde': {'trigram' : 'cde', 'name': 'Kiki', 'trello': '5e69fb8126f1b17a8b9e282b', 'present' : getBoolFromStorage('cde'), 'tab' : null, 'done' : false, 'time' : 0 },
             'mil': {'trigram' : 'mil', 'name': 'Michael', 'trello': '61828a4b9c03d460e173385e', 'present' : getBoolFromStorage('mil'), 'tab' : null, 'done' : false, 'time' : 0 },
+            'mif': {'trigram' : 'mif', 'name': 'Mohamed', 'present' : getBoolFromStorage('mif'), 'tab' : null, 'done' : false, 'time' : 0 },
             'npe': {'trigram' : 'npe', 'name': 'Nikola', 'present' : getBoolFromStorage('npe'), 'tab' : null, 'done' : false, 'time' : 0 },
             'naa': {'trigram' : 'naa', 'name': 'Nassim', 'trello': getBoolFromStorage('naa'), 'present' : getBoolFromStorage('naa'), 'tab' : null, 'done' : false, 'time' : 0 },
             'pst': {'trigram' : 'pst', 'name': 'Philippe', 'trello': '57357594b69d9fd7e3cf8037', 'present' : getBoolFromStorage('pst'), 'tab' : null, 'done' : false, 'time' : 0 },
